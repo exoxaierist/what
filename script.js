@@ -1,7 +1,9 @@
 let itemContainer = document.querySelector('#itemContainer');
 let items = document.querySelectorAll('#item');
-let names
-let brands
+let names = document.querySelectorAll('#name');
+let brands = document.querySelectorAll('#brandImg');
+let firstImgs = document.querySelectorAll('#firstImg');
+let secondImgs = document.querySelectorAll('#secondImg');
 
 let isItemMode = false;
 
