@@ -1,5 +1,17 @@
+@font-face {font-family: Number; src: url(ESNeinTRIAL-Black.otf);}
+@font-face {font-family: Comma; src: url(talldark.ttf); unicode-range: U+002C;}
+
+:root {
+    --background: #d1d1d1;
+    --main: #ee0a25;
+  }
+
 *{
     margin: 0px;
+}
+
+body{
+    background-color: var(--background);
 }
 
 ::-webkit-scrollbar {
@@ -14,49 +26,54 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: gray;
+    background-color: var(--background);
 }
 
 #itemContainer{
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    gap: 100px;
+    width: 90%;
+    gap: 80px;
 }
 #item{
-    width: 150px;
-    height: 150px;
-    background-color: cyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
 }
 
 #contentContainer{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: lightslategray;
     opacity: 0%;
     pointer-events: none;
+    background-color: var(--background);
+    overflow: hidden;
 
     transition-duration: 0.2s;
 }
 .contentContainerActive{
-    height: 200% !important;;
+    height: 200% !important;
     opacity: 100% !important;
     pointer-events: all !important;
 }
 
 #counterContainer{
-    position: sticky;
-    top: 250px;
+    position: fixed;
+    top: 13%;
     width: 100%;
     display: flex;
     justify-content: right;
     align-items: center;
-    z-index: 0;
 }
 #counter{
     margin-right: 100px;
-    font-size: 25rem;
+    font-family: Number,Comma;
+    font-size: 70vh;
+    color: var(--main);
 }
 
 #firstImgContainer{
@@ -80,39 +97,54 @@
     align-items: center;
 }
 #firstImg{
-    width: 100px;
-    height: 100px;
-    background-color: cyan;
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #secondImg{
-    width: 100px;
-    height: 100px;
-    background-color: cyan;
+    position: absolute;
+    height: 70%;
+    width: 80%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img{
+    transition-duration: 0.2s;
+}
+#img:hover{
+    opacity: 50%;
 }
 
 #logoContainer{
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
 
     position: fixed;
-    top: 10%;
+    top: 5%;
     width: 100%;
     height: 100px;
 }
 #logoImg{
     width: 100px;
     height: 100px;
-    background-color: blue;
+    background-color: var(--main);
 }
 
 #exitBtn{
     position:fixed;
-    top: 10%;
-    left: 10%;
+    top: 5%;
+    left: 4%;
     width: 100px;
     height: 100px;
-    background-color: red;
+    background-color: var(--main);
 }
 
 #nameContainer{
@@ -121,7 +153,7 @@
     align-items: center;
 
     position: fixed;
-    top: 80%;
+    bottom: 13%;
     width: 100%;
     height: 50px;
 }
@@ -135,13 +167,13 @@
     align-items: center;
 
     position: fixed;
-    top: 85%;
+    bottom:5%;
     width: 100%;
 }
 #brandImg{
     width: 200px;
     height: 80px;
-    background-color: red;
+    background-color: var(--main);
 }
 
 .hidden{
