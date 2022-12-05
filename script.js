@@ -40,7 +40,6 @@ function ToggleItemMode(){
 }
 
 function FocusOnItem(i){
-    console.log(i);
     for (let i = 0; i < names.length; i++) names[i].classList.add('hidden');
     for (let i = 0; i < brands.length; i++) brands[i].classList.add('hidden');
     for (let i = 0; i < firstImgs.length; i++) firstImgs[i].classList.add('hidden');
@@ -51,6 +50,8 @@ function FocusOnItem(i){
     firstImgs[i%firstImgs.length].classList.remove('hidden');
     secondImgs[i%secondImgs.length].classList.remove('hidden');
     index = i;
+    CalcNumber();
+    window.scrollTo(0,0);
 }
 
 function CalcNumber(){
