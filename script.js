@@ -23,11 +23,11 @@ addEventListener('resize',()=>CenterItemContainer());
 CenterItemContainer();
 
 function CenterItemContainer(){
-    var flexWidth = itemContainer.clientWidth;
-    var itemWidth = 250;
-    var gap = 80;
-    var extra = (flexWidth-itemWidth)%(itemWidth+gap);
-    itemContainer.style.marginLeft = extra+"px";
+    var flexWidth = window.innerWidth*(90/100);
+    var itemWidth = Number(window.getComputedStyle(items[0]).getPropertyValue('width').replace("px",''));
+    var gap =  Number(window.getComputedStyle(itemContainer).getPropertyValue('gap').replace("px",''));
+    var extra = (flexWidth-itemWidth)%(itemWidth+gap)*0.5;
+    itemContainer.style.marginLeft = (extra+window.innerWidth*(5/100))+"px";
 }
 
 function ItemClick(i){
@@ -46,10 +46,10 @@ function FocusOnItem(i){
     for (let i = 0; i < firstImgs.length; i++) firstImgs[i].classList.add('hidden');
     for (let i = 0; i < secondImgs.length; i++) secondImgs[i].classList.add('hidden');
 
-    //names[i].classList.remove('hidden');
-    //brands[i].classList.remove('hidden');
-    firstImgs[i].classList.remove('hidden');
-    secondImgs[i].classList.remove('hidden');
+    names[i%names.length].classList.remove('hidden');
+    brands[i%brands.length].classList.remove('hidden');
+    firstImgs[i%firstImgs.length].classList.remove('hidden');
+    secondImgs[i%secondImgs.length].classList.remove('hidden');
     index = i;
 }
 
