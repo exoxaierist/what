@@ -62,7 +62,7 @@ body{
 
 #counterContainer{
     position: fixed;
-    top: 13%;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: right;
@@ -72,7 +72,9 @@ body{
     margin-right: 100px;
     font-family: Number,Comma;
     font-size: 70vh;
+    line-height: 70vh;
     color: var(--main);
+    background-color: aqua;
 }
 
 #firstImgContainer{
@@ -114,7 +116,7 @@ body{
     align-items: center;
 }
 #img{
-    scale: 0.7;
+    scale: 0.6;
     transition-duration: 0.2s;
 }
 #img:hover{
