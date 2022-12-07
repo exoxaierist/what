@@ -37,6 +37,7 @@ function ItemClick(i){
 
 function ToggleItemMode(){
     contentContainer.classList.toggle('contentContainerActive');
+    itemContainer.classList.toggle('itemContainerActive');
 }
 
 function FocusOnItem(i){
