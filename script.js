@@ -9,6 +9,7 @@ let firstImgs = document.querySelectorAll('#firstImg');
 let secondImgs = document.querySelectorAll('#secondImg');
 
 let counter = document.querySelector('#counter');
+let subCounter = document.querySelector('#subCounterContainer');
 
 let isMenu = false;
 let index = 0;
@@ -64,6 +65,7 @@ function CalcNumber(){
 
 function SetNumber(number){
     counter.innerHTML = number.toLocaleString("en-us");
+    subCounter.innerHTML = number.toLocaleString("en-US")+" ￦";
 }
 
 function lerp(a, b, t) { return (1 - t) * a + t * b; }
