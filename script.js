@@ -2,6 +2,7 @@ let itemContainer = document.querySelector('#itemContainer');
 let items = document.querySelectorAll('#item');
 let contentContainer = document.querySelector('#contentContainer');
 let exitBtn = document.querySelector('#exitBtn');
+let arrowDown = document.querySelector('#arrowDown');
 
 let names = document.querySelectorAll('#name');
 let brands = document.querySelectorAll('#brandImg');
@@ -51,12 +52,15 @@ function FocusOnItem(i){
     brands[i%brands.length].classList.remove('hidden');
     firstImgs[i%firstImgs.length].classList.remove('hidden');
     secondImgs[i%secondImgs.length].classList.remove('hidden');
+    arrowDown.classList.remove('arrowHidden');
     index = i;
     CalcNumber();
     window.scrollTo(0,0);
 }
 
 function CalcNumber(){
+    if(isMenu) return;
+    if(window.scrollY/window.innerHeight > 0.1) arrowDown.classList.add('arrowHidden');
     var t = 1-Math.pow(1-clamp((window.scrollY/window.innerHeight)*1.2 - 0.1,0,1),6);
     var n = lerp(firstImgs[index].getAttribute('price'),secondImgs[index].getAttribute('price'),t);
 
