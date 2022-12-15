@@ -126,7 +126,7 @@ body{
     justify-content: center;
     background-color: var(--main);
 
-    font-size: 0.9;
+    font-size: 0.9rem;
     font-family: Pretendard;
     font-weight: 700;
     color: var(--background);
@@ -176,7 +176,7 @@ body{
     overflow-x: visible;
 }
 #img{
-    transform: scale(0.35);
+    transform: scale(0.56);
     transition-duration: 0.2s;
 }
 
@@ -213,8 +213,9 @@ body{
     align-items: center;
 
     position: fixed;
-    top: 5vh;
+    bottom: 12vh;
     width: 100vw;
+    background-color: none;
 }
 #name{
     font-family: Pretendard;
@@ -228,13 +229,14 @@ body{
     align-items: center;
 
     position: fixed;
-    margin-top: -2px;
-    top: 10vh;
+    top: 5vh;
     width: 100%;
+    pointer-events: none;
 }
 #brandImg{
+    pointer-events: none;
+    height: 13vh;
     object-fit: contain;
-    height: 3vh;
 }
 
 .hidden{
@@ -242,9 +244,18 @@ body{
     pointer-events: none !important;
 }
 
+#arrowUp{
+    position: fixed;
+    top: 16vh;
+    width: 3vw;
+    height: 3vw;
+    object-fit: contain;
+    transition-duration: 0.5s;
+    opacity: 100%;
+}
 #arrowDown{
     position: fixed;
-    bottom: 13vh;
+    bottom: 16vh;
     width: 3vw;
     height: 3vw;
     object-fit: contain;
@@ -254,6 +265,27 @@ body{
 .arrowHidden{
     opacity: 0% !important;
 }
+
+#cursor{
+    pointer-events: none;
+    position: fixed;
+    opacity: 0%;
+    background-color: var(--main);
+    color: var(--background);
+    padding: 7px;
+}
+#cursorText{
+    font-family: Pretendard;
+    font-weight: 600;
+    display: none;
+}
+.cursorActive{
+    opacity: 100% !important;
+}
+.cursorTextActive{
+    display:inline !important;
+}
+
 @media (max-width: 500px){
     #itemContainer{
         top: 30px;
@@ -265,41 +297,57 @@ body{
         word-break:break-all;
     }
     #counterContainer{
-        transform: translateX(100px) translateY(130px) scale(0.4);
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
     }
     #counter{
-        margin-right: 7vh;
+        position: fixed;
+        bottom: 25vh;
+        height: 40vw;
+        font-size: 55vw;
     }
     #won{
         display: none;
-        height: 0rem;
-        font-size: 2rem;
-        padding: 1.3rem 1.3rem;
-        margin-right: 7vh;
+        width: 0px;
+        padding: 0px;
+        margin-right: 0px;
     }
     #subCounterContainer{
         right: 5vh;
     }
     #img{
-        transform: scale(1) translateY(-100px);
+        transform: scale(1) translateY(-15vh);
     }
     #logoImg{
         height: 14vw;
     }
+    #brandImg{
+        height: 20vw;
+    }
     #nameContainer{
         justify-content: right;
+        align-items: flex-end;
         top: auto;
-        bottom: 13vh;
+        bottom: 11vh;
         right: 5vh;
     }
     #exitBtn{
         width: 8vw;
         height: 8vw;
     }
+    #arrowUp{
+        top: 1vh;
+        width: 11vw;
+        height: 11vw;
+    }
     #arrowDown{
         bottom: 1vh;
         width: 11vw;
         height: 11vw;
+    }
+    #cursor{
+        display: none;
     }
 }
 
