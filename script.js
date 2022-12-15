@@ -55,7 +55,7 @@ function ItemHover(i){
 
 function ItemLeaveHover(){
     if(!isMenu) return;
-    document.body.style.cursor = "url('./icons/questionmark2.svg'), auto"
+    document.body.style.cursor = "url('./icons/questionmark.svg'), auto"
     cursor.classList.remove('cursorActive');
     for (let i = 0; i < cursorTexts.length; i++) {
         cursorTexts[i].classList.remove('cursorTextActive');    
