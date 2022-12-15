@@ -11,6 +11,7 @@
 *{
     margin: 0px;
     overflow-x: hidden;
+    overflow-y: scroll;
     user-select: none;
 }
 
@@ -252,6 +253,7 @@ body{
     object-fit: contain;
     transition-duration: 0.5s;
     opacity: 100%;
+    transform: scaleY(-1);
 }
 #arrowDown{
     position: fixed;

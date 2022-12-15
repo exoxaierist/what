@@ -71,7 +71,7 @@ function ToggleItemMode(){
 
 function FocusOnItem(i){
     if(isMenu) return;
-    document.body.style.cursor = "crosshair";
+    document.body.style.cursor = "url('./icons/mouse_dot.svg') 2 2, auto";
     for (let i = 0; i < names.length; i++) names[i].classList.add('hidden');
     for (let i = 0; i < brands.length; i++) brands[i].classList.add('hidden');
     for (let i = 0; i < firstImgs.length; i++) firstImgs[i].classList.add('hidden');
