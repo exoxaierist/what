@@ -30,6 +30,7 @@ addEventListener('resize',()=>CenterItemContainer());
 document.onmousemove = FollowMouse;
 
 CenterItemContainer();
+ItemLeaveHover();
 
 function CenterItemContainer(){
     var flexWidth = window.innerWidth*(90/100);
@@ -52,6 +53,8 @@ function ItemHover(i){
 }
 
 function ItemLeaveHover(){
+    if(!isMenu) return;
+    document.body.style.cursor = "url('./icons/questionmark2.svg'), auto"
     cursor.classList.remove('cursorActive');
     for (let i = 0; i < cursorTexts.length; i++) {
         cursorTexts[i].classList.remove('cursorTextActive');    
@@ -59,6 +62,7 @@ function ItemLeaveHover(){
 }
 
 function ItemClick(i){
+    ItemLeaveHover();
     ToggleItemMode();
     FocusOnItem(i);
 }
@@ -67,11 +71,12 @@ function ToggleItemMode(){
     isMenu = !isMenu
     contentContainer.classList.toggle('contentContainerActive');
     itemContainer.classList.toggle('itemContainerActive');
+    ItemLeaveHover();
 }
 
 function FocusOnItem(i){
     if(isMenu) return;
-    document.body.style.cursor = "url('./icons/mouse_dot.svg') 2 2, auto";
+    document.body.style.cursor = "url('./icons/mouse_dot.svg'), auto";
     for (let i = 0; i < names.length; i++) names[i].classList.add('hidden');
     for (let i = 0; i < brands.length; i++) brands[i].classList.add('hidden');
     for (let i = 0; i < firstImgs.length; i++) firstImgs[i].classList.add('hidden');
