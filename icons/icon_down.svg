@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600"><defs><style>.b,.c{fill:#e5251f;}.c{stroke:#e60012;stroke-miterlimit:10;stroke-width:8px;}</style></defs><polygon class="c" points="539.89 207.13 530.25 197.48 300 427.73 69.95 197.68 60.31 207.33 290.36 437.37 290.29 437.44 299.94 447.08 300 447.01 300.06 447.08 309.71 437.44 309.64 437.37 539.89 207.13"/><polygon class="b" points="474 447.14 474.06 447.08 474 446.92 473.94 447.08 474 447.14"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2834.65 2834.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e71f19;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="1412.26 1741.13 466.95 1025.39 527.31 945.67 1412.58 1615.94 2307.54 945.51 2367.49 1025.55 1412.26 1741.13"/>
+</svg>
