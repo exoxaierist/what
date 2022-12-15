@@ -27,6 +27,7 @@ for (let i = 0; i < items.length; i++) {
 exitBtn.addEventListener('click',ToggleItemMode);
 document.addEventListener('scroll',()=>CalcNumber());
 addEventListener('resize',()=>CenterItemContainer());
+window.onpopstate = ToggleItemMode;
 document.onmousemove = FollowMouse;
 
 CenterItemContainer();
