@@ -47,7 +47,7 @@ body{
     gap: 5vw;
     pointer-events: all;
 }
-#item{
+.item{
     pointer-events: all;
     display: flex;
     justify-content: center;
@@ -86,6 +86,18 @@ body{
     text-align: center;
     font-weight: 600;
     font-family: Pretendard;
+    line-height: 1.6rem;
+    color: var(--main);
+}
+#footer{
+    position: relative;
+    width: 50vw;
+    padding: 50px;
+
+    text-align: center;
+    font-weight: 600;
+    font-family: Pretendard;
+    font-size: 0.9rem;
     line-height: 1.6rem;
     color: var(--main);
 }
@@ -161,7 +173,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-#firstImg{
+.firstImg{
     position: absolute;
     height: 70vh;
     width: 80vw;
@@ -171,7 +183,7 @@ body{
     align-items: center;
     overflow-x: visible;
 }
-#secondImg{
+.secondImg{
     position: absolute;
     height: 70vh;
     width: 80vw;
@@ -181,7 +193,7 @@ body{
     align-items: center;
     overflow-x: visible;
 }
-#img{
+.img{
     transform: scale(0.56);
     transition-duration: 0.2s;
 }
@@ -223,7 +235,7 @@ body{
     width: 100vw;
     background-color: none;
 }
-#name{
+.name{
     font-family: Pretendard;
     font-weight: 600;
     font-size: 0.9rem;
@@ -239,7 +251,7 @@ body{
     width: 100%;
     pointer-events: none;
 }
-#brandImg{
+.brandImg{
     pointer-events: none;
     height: 13vh;
     object-fit: contain;
@@ -281,7 +293,7 @@ body{
     color: var(--background);
     padding: 7px;
 }
-#cursorText{
+.cursorText{
     font-family: Pretendard;
     font-weight: 600;
     display: none;
@@ -323,13 +335,13 @@ body{
     #subCounterContainer{
         right: 5vh;
     }
-    #img{
+    .img{
         transform: scale(1) translateY(-15vh);
     }
     #logoImg{
         height: 14vw;
     }
-    #brandImg{
+    .brandImg{
         height: 20vw;
     }
     #nameContainer{

@@ -1,20 +1,20 @@
 let itemContainer = document.querySelector('#itemContainer');
-let items = document.querySelectorAll('#item');
+let items = document.querySelectorAll('.item');
 let contentContainer = document.querySelector('#contentContainer');
 let exitBtn = document.querySelector('#exitBtn');
 let arrowUp = document.querySelector('#arrowUp');
 let arrowDown = document.querySelector('#arrowDown');
 
-let names = document.querySelectorAll('#name');
-let brands = document.querySelectorAll('#brandImg');
-let firstImgs = document.querySelectorAll('#firstImg');
-let secondImgs = document.querySelectorAll('#secondImg');
+let names = document.querySelectorAll('.name');
+let brands = document.querySelectorAll('.brandImg');
+let firstImgs = document.querySelectorAll('.firstImg');
+let secondImgs = document.querySelectorAll('.secondImg');
 
 let counter = document.querySelector('#counter');
 let subCounter = document.querySelector('#subCounterContainer');
 
 let cursor = document.querySelector('#cursor');
-let cursorTexts = document.querySelectorAll('#cursorText');
+let cursorTexts = document.querySelectorAll('.cursorText');
 
 let isMenu = true;
 let index = 0;
@@ -45,6 +45,7 @@ function FollowMouse(e){
     cursor.style.top = e.clientY + "px";
     cursor.style.left = e.clientX + "px"
 }
+
 
 function ItemHover(i){
     if(!isMenu) return;
